@@ -18,6 +18,7 @@ import External from './function_component/chidren/style/external';
 import BasicExample from './function_component/boot/task/1';
 import ButtonComponent from './class_component/new/button';
 import FriutOne from './class_component/friut/1';
+import NewFruit from './class_component/friut/curd';
 
 
 
@@ -47,6 +48,8 @@ function App() {
    <BasicExample></BasicExample> */}
    <ButtonComponent></ButtonComponent>
    <FriutOne></FriutOne>
+
+   <NewFruit>~</NewFruit>
      
     </div>
   );
