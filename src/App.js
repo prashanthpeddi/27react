@@ -19,6 +19,7 @@ import BasicExample from './function_component/boot/task/1';
 import ButtonComponent from './class_component/new/button';
 import FriutOne from './class_component/friut/1';
 import NewFruit from './class_component/friut/curd';
+import FecthData from './class_component/fetch/main';
 
 
 
@@ -47,9 +48,10 @@ function App() {
    <External></External>
    <BasicExample></BasicExample> */}
    <ButtonComponent></ButtonComponent>
-   <FriutOne></FriutOne>
+   {/* <FriutOne></FriutOne> */}
 
-   <NewFruit>~</NewFruit>
+   {/* <NewFruit></NewFruit> */}
+   <FecthData  favcol={"red"}></FecthData>
      
     </div>
   );
