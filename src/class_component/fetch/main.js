@@ -36,10 +36,10 @@ class FecthData extends Component{
     Data=async()=>{
         const result =await axios.get("https://fakestoreapi.com/products")
         console.log(result)
-        this.setState({ 
+        // this.setState({ 
 
-            products:result.data
-        })
+        //     products:result.data
+        // })
     }
 
     render(){ 

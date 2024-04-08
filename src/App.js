@@ -20,6 +20,8 @@ import ButtonComponent from './class_component/new/button';
 import FriutOne from './class_component/friut/1';
 import NewFruit from './class_component/friut/curd';
 import FecthData from './class_component/fetch/main';
+import AddCart from './class_component/fetchdata/addcart';
+import SortComponent from './class_component/filter/sort';
 
 
 
@@ -47,11 +49,13 @@ function App() {
    {/* <IlineStyle></IlineStyle>
    <External></External>
    <BasicExample></BasicExample> */}
-   <ButtonComponent></ButtonComponent>
+   {/* <ButtonComponent></ButtonComponent> */}
    {/* <FriutOne></FriutOne> */}
 
    {/* <NewFruit></NewFruit> */}
-   <FecthData  favcol={"red"}></FecthData>
+   {/* <FecthData  favcol={"red"}></FecthData> */}
+   {/* <AddCart></AddCart>   */}
+   <SortComponent></SortComponent>
      
     </div>
   );
