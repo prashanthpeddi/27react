@@ -22,6 +22,12 @@ import NewFruit from './class_component/friut/curd';
 import FecthData from './class_component/fetch/main';
 import AddCart from './class_component/fetchdata/addcart';
 import SortComponent from './class_component/filter/sort';
+import UseStateExample from './function_component/hooks/usestateex';
+import UseState2 from './function_component/hooks/usestateex2';
+import UseState3 from './function_component/hooks/usestateex3';
+import UserComponent from './function_component/forms/newform';
+import FruitForm from './function_component/forms/fruitform';
+
 
 
 
@@ -55,7 +61,12 @@ function App() {
    {/* <NewFruit></NewFruit> */}
    {/* <FecthData  favcol={"red"}></FecthData> */}
    {/* <AddCart></AddCart>   */}
-   <SortComponent></SortComponent>
+   {/* <SortComponent></SortComponent> */}
+{/* <UseStateExample></UseStateExample>
+<UseState2></UseState2>
+<UseState3></UseState3> */}
+<UserComponent></UserComponent>
+<FruitForm></FruitForm>
      
     </div>
   );
