@@ -33,6 +33,9 @@ import ApiControlledFrom from './function_component/forms/apicontrolledfrom';
 import UseEffect from './function_component/hooks/useeffect';
 import UseEffectExample from './function_component/hooks/useeffectexample';
 import FectchWether from './whether/weatherapi';
+import NavigationStack from './navigations/navigation-stack';
+
+
 
 
 
@@ -80,7 +83,9 @@ function App() {
      {/* <UseEffect></UseEffect>
      <UseEffectExample></UseEffectExample> */}
 
-     <FectchWether></FectchWether>
+     {/* <FectchWether></FectchWether> */}
+    
+    <NavigationStack></NavigationStack>
     </div>
   );
 }
