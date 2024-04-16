@@ -43,7 +43,7 @@ if(usernameref.current.value.length <5){
     <br></br><br></br>
     <input type="password" placeholder="Password" ref={passwordref}></input>
     <br></br>
-  { errorvisible && <span style={{color:"red"}}>chusi type chey ra pukaa</span>}
+  { errorvisible && <span style={{color:"red"}}>chusi type chey ra </span>}
     <br></br>
     <input type="submit"></input>
 </form>

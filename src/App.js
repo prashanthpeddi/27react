@@ -27,6 +27,13 @@ import UseState2 from './function_component/hooks/usestateex2';
 import UseState3 from './function_component/hooks/usestateex3';
 import UserComponent from './function_component/forms/newform';
 import FruitForm from './function_component/forms/fruitform';
+import ControlledFrom from './function_component/forms/controlledfrom';
+import Controlledfrom1 from './function_component/forms/controlledfrom1';
+import ApiControlledFrom from './function_component/forms/apicontrolledfrom';
+import UseEffect from './function_component/hooks/useeffect';
+import UseEffectExample from './function_component/hooks/useeffectexample';
+import FectchWether from './whether/weatherapi';
+
 
 
 
@@ -65,9 +72,15 @@ function App() {
 {/* <UseStateExample></UseStateExample>
 <UseState2></UseState2>
 <UseState3></UseState3> */}
-<UserComponent></UserComponent>
-<FruitForm></FruitForm>
-     
+{/* <UserComponent></UserComponent> */}
+{/* <FruitForm></FruitForm>
+<ControlledFrom></ControlledFrom> */}
+{/* <Controlledfrom1></Controlledfrom1> */}
+     {/* <ApiControlledFrom></ApiControlledFrom> */}
+     {/* <UseEffect></UseEffect>
+     <UseEffectExample></UseEffectExample> */}
+
+     <FectchWether></FectchWether>
     </div>
   );
 }
