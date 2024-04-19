@@ -1,13 +1,19 @@
 import axios from "axios";
-import Header from "../../component_nav/header";
-import { useEffect, useState } from "react";
+import Header, { ContentChange } from "../../component_nav/header";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { DataShare } from "../navigation-stack";
 
 
 
 
 const HomeScreen=()=>{
 const [products,setproducts]=useState([])
+ const {data, ChangeData}= useContext(DataShare)
+ const res=useContext(ContentChange)
+//  console.log(res);
+
+
     useEffect(()=>{
 FetchApiData()
     },[])
@@ -30,7 +36,9 @@ const FetchApiData=async()=>{
     return(
         < >
                 <Header></Header>
-        <h3>Welcome to HomeScreen</h3>
+        <h3>Welcome to HomeScreen {data.name}</h3>
+        <button onClick={ChangeData}>click to change data</button>
+        <button onClick={res.ColorChange}>Click to change the color</button>
 
         {
             products.map((val,index)=>{
