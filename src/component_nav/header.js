@@ -1,25 +1,16 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { ContentChange } from "../navigations/pages/home-screen";
 
 
 
-  export const ContentChange=createContext()
+
 
 const Header=()=>{
-
-  const [color,setcolor]=useState(
-    {
-      color:"red"
-    }
-  )
-
-
-const ColorChange=()=>{
-  setcolor({color:"green"})
-}
+ const {color}=useContext(ContentChange)
 
     return(
-      <ContentChange.Provider value={{color,ColorChange}}>
+     
           
 <nav className="navbar navbar-expand-sm bg-light navbar-light">
   <div className="container-fluid">
@@ -48,7 +39,7 @@ const ColorChange=()=>{
 </nav>
 
 
-      </ContentChange.Provider>
+   
       
     )
 }

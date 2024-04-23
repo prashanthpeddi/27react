@@ -1,22 +1,36 @@
 import axios from "axios";
-import Header, { ContentChange } from "../../component_nav/header";
+import Header from "../../component_nav/header";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { DataShare } from "../navigation-stack";
+import { DataShare} from "../navigation-stack";
+import { createContext } from "react"
 
 
-
+export const ContentChange=createContext()
 
 const HomeScreen=()=>{
 const [products,setproducts]=useState([])
  const {data, ChangeData}= useContext(DataShare)
- const res=useContext(ContentChange)
+//   const {Color,ColorChange}=useContext(ContentChange)
 //  console.log(res);
+
+const [color,setcolor]=useState(
+    {
+      color:"red"
+    }
+  )
+
+
 
 
     useEffect(()=>{
 FetchApiData()
     },[])
+
+    const ColorChange=()=>{
+        setcolor({color:"green"})
+      }
+
 
 const FetchApiData=async()=>{
     try{
@@ -35,10 +49,12 @@ const FetchApiData=async()=>{
 
     return(
         < >
+         <ContentChange.Provider value={{color,ColorChange}}>
                 <Header></Header>
         <h3>Welcome to HomeScreen {data.name}</h3>
+        <button onClick={ColorChange}>cLIck to change color</button>
         <button onClick={ChangeData}>click to change data</button>
-        <button onClick={res.ColorChange}>Click to change the color</button>
+        {/* <button onClick={ColorChange}>Click to change the color</button> */}
 
         {
             products.map((val,index)=>{
@@ -46,13 +62,14 @@ const FetchApiData=async()=>{
                     <>
                     <img  src={val.thumbnail} width="150px"></img>
                     <button><Link to={`${val.brand}/${val.id}`}>click to see more</Link></button>
+               
                     </>
                 )
             })
 
         }
 
-        
+</ContentChange.Provider>
         </>
     )
 }
